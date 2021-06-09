@@ -4,6 +4,7 @@ package com.maxtest;
     public class MaxNum<T extends Comparable<T>> {
 
         T[] values;
+        private Object maximum;
 
         @SafeVarargs
         public MaxNum(T... values) {
@@ -11,7 +12,12 @@ package com.maxtest;
         }
 
         public T testMax() {
+            printMax(maximum);
             return MaxNum(values);
+        }
+
+        public static <T> void printMax(T maximum) {
+            System.out.println("Maximum number is: " + maximum);
         }
 
         @SafeVarargs
