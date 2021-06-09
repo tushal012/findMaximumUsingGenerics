@@ -57,4 +57,19 @@ public class MaxNumTest {
         String maximumNum = maxNum.testMax("Peach", "Apple", "Banana");
         Assertions.assertEquals("Banana", maximumNum);
     }
+
+    @Test
+    public void givenMultipleInt_shouldReturn_maxInt() {
+        Assertions.assertEquals(4, new MaxNum(5, 4, 3).testMax());
+    }
+
+    @Test
+    public void givenMultipleFloat_shouldReturn_maxFloat() {
+        Assertions.assertEquals( 3.3f, new MaxNum(1.1f, 3.3f, 6.6f).testMax());
+    }
+
+    @Test
+    public void givenMultipleString_shouldReturn_maxString() {
+        Assertions.assertEquals("peach", new MaxNum<>("peach", "banana", "apple").testMax());
+    }
 }
