@@ -41,4 +41,20 @@ public class MaxNumTest {
         Float maximumNum = maxNum.testMax(13.01f, 12.6f, 10.5f);
         Assertions.assertEquals(10.05f, maximumNum);
     }
+
+    @Test
+    public void givenMaxStringAtFirstPosition_ShouldReturnSameNum() {
+        String maximumNum = maxNum.testMax("Peach", "Apple", "Banana");
+        Assertions.assertEquals("Peach", maximumNum);
+    }
+    @Test
+    public void givenMaxStringAtSecondPosition_ShouldReturnSameNum() {
+        String maximumNum = maxNum.testMax("Peach", "Apple", "Banana");
+        Assertions.assertEquals("Apple", maximumNum);
+    }
+    @Test
+    public void givenMaxStringAtThirdPosition_ShouldReturnSameNum() {
+        String maximumNum = maxNum.testMax("Peach", "Apple", "Banana");
+        Assertions.assertEquals("Banana", maximumNum);
+    }
 }
