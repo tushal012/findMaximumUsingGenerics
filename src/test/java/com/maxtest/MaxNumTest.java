@@ -23,4 +23,22 @@ public class MaxNumTest {
         Integer maximumNum = maxNum.testMax(5, 4, 3);
         Assertions.assertEquals(3, maximumNum);
     }
+
+    // test cases for float number to check max number.
+    @Test
+    public void givenMaxFloatNumAtFirstPosition_ShouldReturnSameNum() {
+        Float maximumNum = maxNum.testMax(13.01f, 12.6f, 10.5f);
+        Assertions.assertEquals(13.01f, maximumNum);
+    }
+
+    @Test
+    public void givenMaxFloatNumAtSecondPosition_ShouldReturnSameNum() {
+        Float maximumNum = maxNum.testMax(13.01f, 12.6f, 10.5f);
+        Assertions.assertEquals(12.6f, maximumNum);
+    }
+    @Test
+    public void givenMaxFloatNumAtThirdPosition_ShouldReturnSameNum() {
+        Float maximumNum = maxNum.testMax(13.01f, 12.6f, 10.5f);
+        Assertions.assertEquals(10.05f, maximumNum);
+    }
 }
